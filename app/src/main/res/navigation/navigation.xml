@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@+id/memberListFragment">
+
+    <fragment
+        android:id="@+id/memberListFragment"
+        android:name="fi.metropolia.parliamentmembersapp.memberlist.MemberListFragment"
+        android:label="fragment_list_member"
+        tools:layout="@layout/fragment_member_list">
+        <action
+            android:id="@+id/action_memberListFragment_to_memberDetailFragment"
+            app:destination="@id/memberDetailFragment" />
+        <action
+            android:id="@+id/action_memberListFragment_to_partyFragment"
+            app:destination="@id/partyFragment" />
+        <action
+            android:id="@+id/action_memberListFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/memberDetailFragment"
+        android:name="fi.metropolia.parliamentmembersapp.memberdetail.MemberDetailFragment"
+        android:label="fragment_member_detail"
+        tools:layout="@layout/fragment_member_detail">
+        <argument
+            android:name="selectedMember"
+            app:argType="fi.metropolia.parliamentmembersapp.network.Members"/>
+        <action
+            android:id="@+id/action_memberDetailFragment_to_memberCommentFragment"
+            app:destination="@id/memberCommentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/partyFragment"
+        android:name="fi.metropolia.parliamentmembersapp.partylist.PartyFragment"
+        android:label="fragment_party"
+        tools:layout="@layout/fragment_party" />
+
+    <fragment
+        android:id="@+id/memberCommentFragment"
+        android:name="fi.metropolia.parliamentmembersapp.comment.MemberCommentFragment"
+        android:label="MemberCommentFragment">
+    <argument
+        android:name="selectedMember"
+        app:argType="fi.metropolia.parliamentmembersapp.network.Members"/>
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="fi.metropolia.parliamentmembersapp.AboutFragment"
+        android:label="AboutFragment" />
+</navigation>

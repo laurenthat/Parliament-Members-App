@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="comment"
+            type="fi.metropolia.parliamentmembersapp.network.Comments" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/member_comment_date"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="8dp"
+            android:textDirection="rtl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/member_comment"
+            app:layout_constraintTop_toTopOf="@+id/member_comment"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Time">
+        </TextView>
+
+        <TextView
+            android:id="@+id/member_comment"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="24dp"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Comments here">
+        </TextView>
+
+        <View
+            android:layout_width="370dp"
+            android:layout_height="2dp"
+            android:background="@color/silver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/member_comment"
+            app:layout_constraintStart_toStartOf="@+id/member_comment"
+            app:layout_constraintTop_toBottomOf="@+id/member_comment">
+        </View>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

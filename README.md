@@ -4,7 +4,10 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/laurenthat/Parliament-Members-App?style=flat-square)
 
 The application presents the user with details about the current Finnish members of parliament. 
-## Demo
+## Application demo
+<p align="center">
+<img src="https://github.com/laurenthat/Parliament-Members-App/blob/master/app/src/main/res/img/MembersOfParliament.gif" width="200" height="400" />
+</p>
 
 ## Installation
 
